@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title> Boosting Your Real-Time Data
+    and Analytics Capabilities</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white font-sans">
+
+  <!-- Navbar -->
+  <div id="navbar"></div>
+
+  <!-- Banner Images -->
+  <div class="max-w-5xl mx-auto mt-6">
+    <img src="assets/images/image38a.png" alt="Simpplr Banner" class="w-full">
+  </div>
+  <div class="max-w-5xl mx-auto mt-6">
+    <img src="assets/images/image38b.png" alt="Webinar Banner" class="w-full">
+  </div>
+
+  <!-- Title + Register -->
+  <div class="max-w-5xl mx-auto mt-12 text-center">
+    <h1 class="text-3xl md:text-4xl font-semibold text-gray-900 leading-snug mb-8">
+      Boosting Your Real-Time Data
+      and Analytics Capabilities
+    </h1>
+    <button id="registerBtn"
+      class="mb-12 bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded font-semibold shadow">
+      REGISTER NOW
+    </button>
+  </div>
+
+  <!-- Main Content -->
+  <div class="max-w-5xl mx-auto text-gray-800 space-y-4 px-4">
+    <p>
+      Whether you're personalizing customer experiences, optimizing operations, or powering AI
+      models, the speed at which data moves through systems defines your business edge. As a
+      result,<span class="font-semibold"> boosting real-time data and analytics capabilities is a top priority for
+        business
+        leaders looking to gain competitive advantage through faster insights and decision
+        making.</span> However, many organizations are still saddled with legacy data warehouses, data
+      silos, and latency-heavy pipelines that can't keep up with today's demands.
+    </p>
+
+    <p>
+      On the other hand, new technologies and strategic architectural practices are providing a
+      foundation for building responsive, data-driven systems that can process and act on
+      information the moment it's generated. This includes the rise of events-driven and
+      streaming-first architectures, data ingestion and streaming engines, in-memory databases
+      and modern OLAP engines, and modern data integration and analytics tools.<span class="font-semibold"> To dive
+        into the
+        key technologies and best practices paving the road forward, DBTA is hosting a special
+        roundtable webinar on November 6th.</span>
+    </p>
+
+    <p>Reserve your seat today!</p>
+
+    <p>
+      <span id="registerText" class="text-red-600 font-bold cursor-pointer hover:underline">REGISTER NOW</span>
+      to attend the webinar <span class="font-semibold">Ar Boosting Your Real-Time Data and Analytics 
+Capabilities.</span>
+    </p>
+
+    <p>
+      Don't miss this live event on <span class="font-semibold"> Thursday, November 6, 11 AM PT / 2 PM ET.</span>
+    </p>
+  </div>
+
+  </div>
+
+
+  <!-- Footer -->
+  <div id="footer" class="mt-12"></div>
+
+  <!-- JS -->
+  <script>
+    // Load navbar and footer
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('navbar').innerHTML = data);
+
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('footer').innerHTML = data);
+
+    // Register actions
+    function goRegister() {
+      window.open('register.html', '_blank');
+    }
+
+    document.getElementById('registerBtn').addEventListener('click', goRegister);
+    document.getElementById('registerText').addEventListener('click', goRegister);
+  </script>
+
+</body>
+
+</html>
